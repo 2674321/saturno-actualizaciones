@@ -1,0 +1,30 @@
+{
+  "esquema": "saturno-update/1",
+  "producto": "Saturno",
+  "canal": "stable",
+  "version": "1.0.0",
+  "revision": "ab1c31e850905feae7b1180c9381f4216b1a3ece",
+  "publicado": "2026-10-29",
+  "notas": "Saturno V16 Oficial: canal público automático, sincronización PC–Android por HTTPS y QR, mejoras visuales, informes y documentos corregidos.",
+  "minimo_actualizador": "1.0.0",
+  "artefactos": {
+    "linux-x86_64": [
+      {
+        "archivo": "Saturno-1.0.0-linux-x86_64.tar.gz",
+        "tipo": "portable-linux",
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.0.0/Saturno-1.0.0-linux-x86_64.tar.gz",
+        "tamano": 26605735,
+        "sha256": "b32c0f4a4717d7d69b4c60850d803516633e08d40d3bf8267b9ba17a28aa9055"
+      }
+    ],
+    "windows-x86_64": [
+      {
+        "archivo": "Saturno-1.0.0-windows-x86_64.exe",
+        "tipo": "instalador-windows",
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.0.0/Saturno-1.0.0-windows-x86_64.exe",
+        "tamano": 21039996,
+        "sha256": "2a8531cfd56a6f2632e706692c7e3bf651844f362b1ae3d9f9212a3635e5cfff"
+      }
+    ]
+  }
+}
