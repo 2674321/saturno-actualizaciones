@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.2.2",
-  "revision": "5b13f8b37b9b86df4f5da96a126202a66b0176e8",
+  "version": "1.2.3",
+  "revision": "a31f8e344c94461fac5c5dab21392a38a009f8d7",
   "publicado": "2026-10-29",
-  "notas": "Saturno PC 1.2.2 agrega el botón Generar informe de deuda (PDF) en Ingresos, justo después de seleccionar una parcela y consultar su deuda. También mantiene el acceso separado al estado de cuenta completo.",
+  "notas": "Saturno PC 1.2.3 mejora la búsqueda de actualizaciones: confirma el clic de inmediato con animación y estado de carga, evita envíos dobles y vuelve directamente al panel mostrando el resultado destacado.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.2.2-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.2.3-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.2/Saturno-1.2.2-linux-x86_64.tar.gz",
-        "tamano": 26655645,
-        "sha256": "7c279aeed4bcfbd704316e7f2d8ca8221d3c1da43f2ad92d334a3244e187367a"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.3/Saturno-1.2.3-linux-x86_64.tar.gz",
+        "tamano": 26656040,
+        "sha256": "8d30c4320de22b3e1de03ce73e36c5d13ce38f9395b65ec92ada319f13397c30"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.2.2-windows-x86_64.exe",
+        "archivo": "Saturno-1.2.3-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.2/Saturno-1.2.2-windows-x86_64.exe",
-        "tamano": 21097290,
-        "sha256": "d5b4a99d1e247df3b6a7eb1783b1c430c02fd448051c4c6b1bdeadfb9f885019"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.3/Saturno-1.2.3-windows-x86_64.exe",
+        "tamano": 21097898,
+        "sha256": "3a2f04ca9000564cd00ae3557deeec767cde8aa2bc7f26aeaa6e29def56619be"
       }
     ]
   }

@@ -1,3 +1,3 @@
-d5b4a99d1e247df3b6a7eb1783b1c430c02fd448051c4c6b1bdeadfb9f885019  Saturno-1.2.2-windows-x86_64.exe
-7c279aeed4bcfbd704316e7f2d8ca8221d3c1da43f2ad92d334a3244e187367a  Saturno-1.2.2-linux-x86_64.tar.gz
+3a2f04ca9000564cd00ae3557deeec767cde8aa2bc7f26aeaa6e29def56619be  Saturno-1.2.3-windows-x86_64.exe
+8d30c4320de22b3e1de03ce73e36c5d13ce38f9395b65ec92ada319f13397c30  Saturno-1.2.3-linux-x86_64.tar.gz
 1b121f43ee60e0cadd849a68d44ee7d7fb08e983d48b865da64a82deab220d1b  Saturno-0.7.0-android-release.apk
