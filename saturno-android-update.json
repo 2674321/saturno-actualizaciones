@@ -1,0 +1,11 @@
+{
+  "schema": "saturno-android-public-update/1",
+  "package_name": "cl.canalsaturno.app",
+  "version_code": 7,
+  "version_name": "0.7.0",
+  "sha256": "1b121f43ee60e0cadd849a68d44ee7d7fb08e983d48b865da64a82deab220d1b",
+  "size": 2302802,
+  "certificate_sha256": "c6766fcae92510e797aa854b3211edf56fdda2221d421d745bbdf14dffc48f23",
+  "download_url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.0/Saturno-0.7.0-android-release.apk",
+  "published_at": "2026-10-29T13:38:00-03:00"
+}

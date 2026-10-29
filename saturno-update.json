@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.1.0",
-  "revision": "a6c18014a0e48f6bc6101af5a0c641a850f44133",
+  "version": "1.2.0",
+  "revision": "0d2e4ad100e7834422b61825eaebabd9f30661fc",
   "publicado": "2026-10-29",
-  "notas": "Saturno V16 Oficial 1.1.0: corrige la versión mostrada en Actualizaciones e incluye los iconos de Sincronización, Sistema y Acerca de en Linux. Conserva la sincronización HTTPS y QR, las mejoras visuales y los formatos oficiales.",
+  "notas": "Saturno PC 1.2.0 automatiza la distribución de actualizaciones Android: descarga la APK oficial verificada y la ofrece a teléfonos ya vinculados. Android 0.7.0 añade además consulta directa al canal público, sin publicar datos contables.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.1.0-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.2.0-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.1.0/Saturno-1.1.0-linux-x86_64.tar.gz",
-        "tamano": 26656287,
-        "sha256": "1dd3df4323afa645c818fb7149bfc5093496e49f38da7125f4356e52d7b6c6a1"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.0/Saturno-1.2.0-linux-x86_64.tar.gz",
+        "tamano": 26657332,
+        "sha256": "f548ae98b2c19dc2526b08947713f03c46e4a5646c69be267d250edeebfa0547"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.1.0-windows-x86_64.exe",
+        "archivo": "Saturno-1.2.0-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.1.0/Saturno-1.1.0-windows-x86_64.exe",
-        "tamano": 21090776,
-        "sha256": "2cb10e98f72c2c0e0daa3101e2360f5f24b92e3c7b992d31d296135d143af616"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.0/Saturno-1.2.0-windows-x86_64.exe",
+        "tamano": 21095438,
+        "sha256": "496832152b348cc9c16ae5f806cbc3d3fb6b2d529bd4f9d22532217e9cc876a9"
       }
     ]
   }
