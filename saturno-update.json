@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.0.0",
-  "revision": "ab1c31e850905feae7b1180c9381f4216b1a3ece",
+  "version": "1.1.0",
+  "revision": "a6c18014a0e48f6bc6101af5a0c641a850f44133",
   "publicado": "2026-10-29",
-  "notas": "Saturno V16 Oficial: canal público automático, sincronización PC–Android por HTTPS y QR, mejoras visuales, informes y documentos corregidos.",
+  "notas": "Saturno V16 Oficial 1.1.0: corrige la versión mostrada en Actualizaciones e incluye los iconos de Sincronización, Sistema y Acerca de en Linux. Conserva la sincronización HTTPS y QR, las mejoras visuales y los formatos oficiales.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.0.0-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.1.0-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.0.0/Saturno-1.0.0-linux-x86_64.tar.gz",
-        "tamano": 26605735,
-        "sha256": "b32c0f4a4717d7d69b4c60850d803516633e08d40d3bf8267b9ba17a28aa9055"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.1.0/Saturno-1.1.0-linux-x86_64.tar.gz",
+        "tamano": 26656287,
+        "sha256": "1dd3df4323afa645c818fb7149bfc5093496e49f38da7125f4356e52d7b6c6a1"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.0.0-windows-x86_64.exe",
+        "archivo": "Saturno-1.1.0-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.0.0/Saturno-1.0.0-windows-x86_64.exe",
-        "tamano": 21039996,
-        "sha256": "2a8531cfd56a6f2632e706692c7e3bf651844f362b1ae3d9f9212a3635e5cfff"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.1.0/Saturno-1.1.0-windows-x86_64.exe",
+        "tamano": 21090776,
+        "sha256": "2cb10e98f72c2c0e0daa3101e2360f5f24b92e3c7b992d31d296135d143af616"
       }
     ]
   }
