@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.2.3",
-  "revision": "a31f8e344c94461fac5c5dab21392a38a009f8d7",
+  "version": "1.2.4",
+  "revision": "a904a6ad0bac2f8882d9f62099a469e22573e63a",
   "publicado": "2026-10-29",
-  "notas": "Saturno PC 1.2.3 mejora la búsqueda de actualizaciones: confirma el clic de inmediato con animación y estado de carga, evita envíos dobles y vuelve directamente al panel mostrando el resultado destacado.",
+  "notas": "Saturno PC 1.2.4 guarda la fecha y la hora reales al registrar ingresos y egresos, muestra la hora en el libro de movimientos sin inventársela a los históricos y restaura el filtro por rango de fechas; la sincronización conserva la hora original del teléfono.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.2.3-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.2.4-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.3/Saturno-1.2.3-linux-x86_64.tar.gz",
-        "tamano": 26656040,
-        "sha256": "8d30c4320de22b3e1de03ce73e36c5d13ce38f9395b65ec92ada319f13397c30"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.4/Saturno-1.2.4-linux-x86_64.tar.gz",
+        "tamano": 26655966,
+        "sha256": "bde33b393610f36d4fed734e32f499949b6747cb806aa798f70edb3d07c0a1f8"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.2.3-windows-x86_64.exe",
+        "archivo": "Saturno-1.2.4-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.3/Saturno-1.2.3-windows-x86_64.exe",
-        "tamano": 21097898,
-        "sha256": "3a2f04ca9000564cd00ae3557deeec767cde8aa2bc7f26aeaa6e29def56619be"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.4/Saturno-1.2.4-windows-x86_64.exe",
+        "tamano": 21099026,
+        "sha256": "7d2681050502b46b0ae025cd75cc8a1cbc7ad6f3c3ff1fada5171d33bf47b6cb"
       }
     ]
   }
