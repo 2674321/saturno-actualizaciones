@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.2.4",
-  "revision": "d3854d86e3edc105875aa6c5474341c176457159",
-  "publicado": "2026-10-29",
-  "notas": "Saturno PC 1.2.4 guarda la fecha y la hora reales al registrar ingresos y egresos, muestra en el libro la hora tal como se registró (los históricos sin hora muestran «—», nunca se inventa) y restaura el filtro por rango de fechas; la sincronización conserva la hora original del teléfono.",
+  "version": "1.2.5",
+  "revision": "62f7b657f7c96e88854c534737ba47d16bf2f5a3",
+  "publicado": "2026-10-30",
+  "notas": "Saturno PC 1.2.5 habilita el canal estable también al actualizar instalaciones antiguas y permite aplicar, con respaldo y validación transaccional, la reparación privada de pagos históricos. Android 0.8.1 muestra el historial completo vinculado a cada padrón, permite filtrarlo por año sin ocultarlo por defecto y distingue claramente los pagos aún no desglosados.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.2.4-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.2.5-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.4/Saturno-1.2.4-linux-x86_64.tar.gz",
-        "tamano": 26655905,
-        "sha256": "35882e1bc69cfa0a91304f3ed9878914e3be27bf781f21386034d27828ecd394"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.5/Saturno-1.2.5-linux-x86_64.tar.gz",
+        "tamano": 26670822,
+        "sha256": "0e91175a146f06fab7ae4fbb8a5ff8871fafd7492727aefd42c77990bc7793de"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.2.4-windows-x86_64.exe",
+        "archivo": "Saturno-1.2.5-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.4/Saturno-1.2.4-windows-x86_64.exe",
-        "tamano": 21099071,
-        "sha256": "76db47034815a583b1414136406a3f380bea86ac8d74924ebb49e5a3b92f1e44"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.5/Saturno-1.2.5-windows-x86_64.exe",
+        "tamano": 21106753,
+        "sha256": "be382239a372249a0cc34fe995cc2efde104276b2a80d721736ab064d93f6a0f"
       }
     ]
   }
