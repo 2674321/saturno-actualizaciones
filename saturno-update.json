@@ -3,9 +3,9 @@
   "producto": "Saturno",
   "canal": "stable",
   "version": "1.2.4",
-  "revision": "a904a6ad0bac2f8882d9f62099a469e22573e63a",
+  "revision": "d3854d86e3edc105875aa6c5474341c176457159",
   "publicado": "2026-10-29",
-  "notas": "Saturno PC 1.2.4 guarda la fecha y la hora reales al registrar ingresos y egresos, muestra la hora en el libro de movimientos sin inventársela a los históricos y restaura el filtro por rango de fechas; la sincronización conserva la hora original del teléfono.",
+  "notas": "Saturno PC 1.2.4 guarda la fecha y la hora reales al registrar ingresos y egresos, muestra en el libro la hora tal como se registró (los históricos sin hora muestran «—», nunca se inventa) y restaura el filtro por rango de fechas; la sincronización conserva la hora original del teléfono.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
@@ -13,8 +13,8 @@
         "archivo": "Saturno-1.2.4-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
         "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.4/Saturno-1.2.4-linux-x86_64.tar.gz",
-        "tamano": 26655966,
-        "sha256": "bde33b393610f36d4fed734e32f499949b6747cb806aa798f70edb3d07c0a1f8"
+        "tamano": 26655905,
+        "sha256": "35882e1bc69cfa0a91304f3ed9878914e3be27bf781f21386034d27828ecd394"
       }
     ],
     "windows-x86_64": [
@@ -22,8 +22,8 @@
         "archivo": "Saturno-1.2.4-windows-x86_64.exe",
         "tipo": "instalador-windows",
         "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.4/Saturno-1.2.4-windows-x86_64.exe",
-        "tamano": 21099026,
-        "sha256": "7d2681050502b46b0ae025cd75cc8a1cbc7ad6f3c3ff1fada5171d33bf47b6cb"
+        "tamano": 21099071,
+        "sha256": "76db47034815a583b1414136406a3f380bea86ac8d74924ebb49e5a3b92f1e44"
       }
     ]
   }
