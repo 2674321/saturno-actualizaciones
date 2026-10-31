@@ -2,29 +2,36 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.2.5",
-  "revision": "62f7b657f7c96e88854c534737ba47d16bf2f5a3",
-  "publicado": "2026-10-30",
-  "notas": "Saturno PC 1.2.5 habilita el canal estable también al actualizar instalaciones antiguas y permite aplicar, con respaldo y validación transaccional, la reparación privada de pagos históricos. Android 0.8.1 muestra el historial completo vinculado a cada padrón, permite filtrarlo por año sin ocultarlo por defecto y distingue claramente los pagos aún no desglosados.",
+  "version": "1.2.6",
+  "revision": "2bd4b7d352164d3855bbc6566bdd63ffaf73c164",
+  "publicado": "2026-10-31",
+  "notas": "Saturno PC 1.2.6 habilita el salto desde instalaciones antiguas y permite aplicar, desde la propia pantalla de Sistema, la reparación privada de pagos históricos con código personal, respaldo previo y validación transaccional. Android permanece en 0.8.1.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.2.5-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.2.6-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.5/Saturno-1.2.5-linux-x86_64.tar.gz",
-        "tamano": 26670822,
-        "sha256": "0e91175a146f06fab7ae4fbb8a5ff8871fafd7492727aefd42c77990bc7793de"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.6/Saturno-1.2.6-linux-x86_64.tar.gz",
+        "tamano": 26673037,
+        "sha256": "0d2fa1309d86c1c3f6bbf930e86de3b693edaf42b9fc1829005f251353351b9e"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.2.5-windows-x86_64.exe",
+        "archivo": "Saturno-1.2.6-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.5/Saturno-1.2.5-windows-x86_64.exe",
-        "tamano": 21106753,
-        "sha256": "be382239a372249a0cc34fe995cc2efde104276b2a80d721736ab064d93f6a0f"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.6/Saturno-1.2.6-windows-x86_64.exe",
+        "tamano": 21113547,
+        "sha256": "8990f015625ff776e114c890be87b3d33ac44194167bd11667d90efe5e1139dd"
       }
     ]
+  },
+  "reparacion_privada": {
+    "id": "reparacion-padrones-2026-10",
+    "archivo": "reparacion-padrones-2026-10.saturno.enc",
+    "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.6/reparacion-padrones-2026-10.saturno.enc",
+    "tamano": 923392,
+    "sha256": "67fbf877b98a97d1c7be472fd0cb51bcec16f49e47868378f5dbd4b1a173c6ba"
   }
 }
