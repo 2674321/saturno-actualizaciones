@@ -1,3 +1,4 @@
-be382239a372249a0cc34fe995cc2efde104276b2a80d721736ab064d93f6a0f  Saturno-1.2.5-windows-x86_64.exe
-0e91175a146f06fab7ae4fbb8a5ff8871fafd7492727aefd42c77990bc7793de  Saturno-1.2.5-linux-x86_64.tar.gz
 c48b8eec5083449223c2fc107f902c68f562f0b24154523d237e771adf29ac2d  Saturno-0.8.1-android-release.apk
+4962ed2c1ca13482e5b9569e9e235da48313e69f80ee90137bd11d2bb4a9921c  Saturno-1.2.7-linux-x86_64.tar.gz
+72157583e007b61adb07627fbedc25d8379913fde7c421cdf64776224f4de4ac  Saturno-1.2.7-windows-x86_64.exe
+67fbf877b98a97d1c7be472fd0cb51bcec16f49e47868378f5dbd4b1a173c6ba  reparacion-padrones-2026-10.saturno.enc
