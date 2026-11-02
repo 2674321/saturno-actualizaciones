@@ -2,35 +2,35 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.2.7",
-  "revision": "74f84903d546ff7a73fcd7f4abcede8730d10ca9",
-  "publicado": "2026-10-31",
-  "notas": "Saturno PC 1.2.7 abre la sección Tarifas: un solo lugar del menú para revisar las cuotas por temporada y confirmar el año de trabajo. El resto de la aplicación deja de avisar de tarifas y el estado de cuenta (PDF) muestra una nota discreta en lugar del bloque REVISAR. El panel de Sistema es más robusto ante estados sin versión comparable. Android permanece en 0.8.1. La reparación privada de padrones sigue disponible con el mismo código personal.",
+  "version": "1.2.8",
+  "revision": "531d15807001a04b039fa92e608d77c0a1cfd508",
+  "publicado": "2026-11-02",
+  "notas": "Saturno PC 1.2.8 es la versión definitiva para instalar con datos incluidos: la reparación privada deja de dar sustos — si la base no contiene los movimientos a corregir, explica con calma «nada que corregir aquí» y no modifica nada; y el paquete de entrega trae un instalador único (INSTALAR-DEFINITIVO.cmd) que instala el programa 1.2.8 y coloca la base corregida sin interrogatorios ni códigos, dejando siempre respaldo preventivo de cualquier base previa. Android permanece en 0.8.1. La reparación privada reutiliza el mismo sobre y el mismo código personal.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.2.7-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.2.8-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.7/Saturno-1.2.7-linux-x86_64.tar.gz",
-        "tamano": 26676230,
-        "sha256": "4962ed2c1ca13482e5b9569e9e235da48313e69f80ee90137bd11d2bb4a9921c"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.8/Saturno-1.2.8-linux-x86_64.tar.gz",
+        "tamano": 26676292,
+        "sha256": "bbe3a64e8700a02bc0fb3387fb1d182aac34019f986e469a7fa44a9a75c0b6ce"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.2.7-windows-x86_64.exe",
+        "archivo": "Saturno-1.2.8-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.7/Saturno-1.2.7-windows-x86_64.exe",
-        "tamano": 21119316,
-        "sha256": "72157583e007b61adb07627fbedc25d8379913fde7c421cdf64776224f4de4ac"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.8/Saturno-1.2.8-windows-x86_64.exe",
+        "tamano": 21119346,
+        "sha256": "fbab713b671903c3d3f4afad13388563bb8e79685f8bc57ddc8c7e3a62f056c8"
       }
     ]
   },
   "reparacion_privada": {
     "id": "reparacion-padrones-2026-10",
     "archivo": "reparacion-padrones-2026-10.saturno.enc",
-    "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.7/reparacion-padrones-2026-10.saturno.enc",
+    "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.8/reparacion-padrones-2026-10.saturno.enc",
     "tamano": 923392,
     "sha256": "67fbf877b98a97d1c7be472fd0cb51bcec16f49e47868378f5dbd4b1a173c6ba"
   }
