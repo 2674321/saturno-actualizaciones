@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.2.8",
-  "revision": "531d15807001a04b039fa92e608d77c0a1cfd508",
-  "publicado": "2026-11-02",
-  "notas": "Saturno PC 1.2.8 es la versión definitiva para instalar con datos incluidos: la reparación privada deja de dar sustos — si la base no contiene los movimientos a corregir, explica con calma «nada que corregir aquí» y no modifica nada; y el paquete de entrega trae un instalador único (INSTALAR-DEFINITIVO.cmd) que instala el programa 1.2.8 y coloca la base corregida sin interrogatorios ni códigos, dejando siempre respaldo preventivo de cualquier base previa. Android permanece en 0.8.1. La reparación privada reutiliza el mismo sobre y el mismo código personal.",
+  "version": "1.3.0",
+  "revision": "ef7bd16786960ee1adaceb766a951f2546bf2c13",
+  "publicado": "2026-11-04",
+  "notas": "Saturno PC 1.3.0 corrige el cálculo de cuota social mediante periodicidad mensual explícita y meses exigibles, sin multiplicar temporadas históricas automáticamente. Añade respaldo previo a la migración, historial consolidado por parcela, detalle mensual, formatos imprimibles mejorados y aviso automático de actualizaciones.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.2.8-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.3.0-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.8/Saturno-1.2.8-linux-x86_64.tar.gz",
-        "tamano": 26676292,
-        "sha256": "bbe3a64e8700a02bc0fb3387fb1d182aac34019f986e469a7fa44a9a75c0b6ce"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.0/Saturno-1.3.0-linux-x86_64.tar.gz",
+        "tamano": 26693269,
+        "sha256": "23c6036ef652d512774a556d6057e0cda2fab1f9e2e99dc8217af454558ef2d2"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.2.8-windows-x86_64.exe",
+        "archivo": "Saturno-1.3.0-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.8/Saturno-1.2.8-windows-x86_64.exe",
-        "tamano": 21119346,
-        "sha256": "fbab713b671903c3d3f4afad13388563bb8e79685f8bc57ddc8c7e3a62f056c8"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.0/Saturno-1.3.0-windows-x86_64.exe",
+        "tamano": 21126959,
+        "sha256": "13aaa2f59198af0d4e0298ae527df76d30686090b8d2a79e34433ffcbed71fde"
       }
     ]
   },

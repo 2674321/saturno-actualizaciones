@@ -1,11 +1,11 @@
 {
   "schema": "saturno-android-public-update/1",
   "package_name": "cl.canalsaturno.app",
-  "version_code": 9,
-  "version_name": "0.8.1",
-  "sha256": "c48b8eec5083449223c2fc107f902c68f562f0b24154523d237e771adf29ac2d",
-  "size": 2319170,
+  "version_code": 11,
+  "version_name": "0.9.0",
+  "sha256": "6346dcd4912458dc3d150eade662cffec40bd7e1fc16b40c60dfcb4dde17b3e2",
+  "size": 2319173,
   "certificate_sha256": "c6766fcae92510e797aa854b3211edf56fdda2221d421d745bbdf14dffc48f23",
-  "download_url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.5/Saturno-0.8.1-android-release.apk",
-  "published_at": "2026-10-30T19:50:00-03:00"
+  "download_url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.0/Saturno-0.9.0-android-release.apk",
+  "published_at": "2026-11-04T19:10:00-03:00"
 }
