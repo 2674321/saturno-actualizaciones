@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.3.1",
-  "revision": "7d249f40fc029999f53ec5c2a184fb73e3e1c1f2",
+  "version": "1.4.0",
+  "revision": "75d3f8ef3059018c3853881f76f69cb5cf7531f0",
   "publicado": "2026-11-05",
-  "notas": "Saturno PC 1.3.1 incorpora automáticamente las tarifas históricas oficiales 2016–2026 mediante una migración respaldada e idempotente. Aplica el mínimo mensual sólo desde 2021, conserva las limpias 2023–2026 como pendientes, no modifica movimientos y añade un canal alternativo ante fallas transitorias de GitHub.",
+  "notas": "Saturno PC 1.4.0 simplifica tarifas y operaciones: valores CLP claros, limpias pendientes sin inventar cero, historial compacto, menos confirmaciones innecesarias y herramientas de soporte plegadas. Android 1.0.0 añade búsqueda flexible por P4, P 4, parcela 4, titular, rol o RUT, filtros más claros y registro de ingresos directo desde la parcela.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.3.1-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.4.0-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.1/Saturno-1.3.1-linux-x86_64.tar.gz",
-        "tamano": 26695486,
-        "sha256": "73d73ec123e508017911c4ce46cb1c4fbabc1abbe2131835b22931ce656e9169"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.4.0/Saturno-1.4.0-linux-x86_64.tar.gz",
+        "tamano": 26694541,
+        "sha256": "c0a2c6e9ee791d8c0f4b9c65fad83f52a7d053553bb705b4a21bfa9c12b5df55"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.3.1-windows-x86_64.exe",
+        "archivo": "Saturno-1.4.0-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.1/Saturno-1.3.1-windows-x86_64.exe",
-        "tamano": 21131686,
-        "sha256": "e98d321957f6a9ad8a32db088f3141e9970276ce51775284b8ce85dd9a8dac3e"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.4.0/Saturno-1.4.0-windows-x86_64.exe",
+        "tamano": 21132214,
+        "sha256": "9613a3ea191ee10f600e8974835f8fa5beb32c4d5dae6725a28f3b1f13207380"
       }
     ]
   },
