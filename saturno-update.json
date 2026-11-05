@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.3.0",
-  "revision": "ef7bd16786960ee1adaceb766a951f2546bf2c13",
-  "publicado": "2026-11-04",
-  "notas": "Saturno PC 1.3.0 corrige el cálculo de cuota social mediante periodicidad mensual explícita y meses exigibles, sin multiplicar temporadas históricas automáticamente. Añade respaldo previo a la migración, historial consolidado por parcela, detalle mensual, formatos imprimibles mejorados y aviso automático de actualizaciones.",
+  "version": "1.3.1",
+  "revision": "7d249f40fc029999f53ec5c2a184fb73e3e1c1f2",
+  "publicado": "2026-11-05",
+  "notas": "Saturno PC 1.3.1 incorpora automáticamente las tarifas históricas oficiales 2016–2026 mediante una migración respaldada e idempotente. Aplica el mínimo mensual sólo desde 2021, conserva las limpias 2023–2026 como pendientes, no modifica movimientos y añade un canal alternativo ante fallas transitorias de GitHub.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.3.0-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.3.1-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.0/Saturno-1.3.0-linux-x86_64.tar.gz",
-        "tamano": 26693269,
-        "sha256": "23c6036ef652d512774a556d6057e0cda2fab1f9e2e99dc8217af454558ef2d2"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.1/Saturno-1.3.1-linux-x86_64.tar.gz",
+        "tamano": 26695486,
+        "sha256": "73d73ec123e508017911c4ce46cb1c4fbabc1abbe2131835b22931ce656e9169"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.3.0-windows-x86_64.exe",
+        "archivo": "Saturno-1.3.1-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.0/Saturno-1.3.0-windows-x86_64.exe",
-        "tamano": 21126959,
-        "sha256": "13aaa2f59198af0d4e0298ae527df76d30686090b8d2a79e34433ffcbed71fde"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.3.1/Saturno-1.3.1-windows-x86_64.exe",
+        "tamano": 21131686,
+        "sha256": "e98d321957f6a9ad8a32db088f3141e9970276ce51775284b8ce85dd9a8dac3e"
       }
     ]
   },
