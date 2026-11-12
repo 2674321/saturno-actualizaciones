@@ -2,28 +2,28 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.4.5",
-  "revision": "cda23f21b78ff282197828d3a11c24375511e145",
+  "version": "1.4.6",
+  "revision": "fd8001d90befb6cdff7ad5f5c587cb45b36697cd",
   "publicado": "2026-11-12",
-  "notas": "Saturno PC 1.4.5 mejora los cobros y saldos a favor, refuerza la actualización integrada, conserva los datos al actualizar y corrige sincronización, informes y mensajes operativos.",
+  "notas": "Saturno PC 1.4.6 actualiza en tiempo real cada concepto y el total del ingreso, comprueba la deuda sin guardar, mejora el feedback al escribir y evita envíos duplicados mientras prepara el comprobante.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.4.5-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.4.6-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.4.5/Saturno-1.4.5-linux-x86_64.tar.gz",
-        "tamano": 26746846,
-        "sha256": "45ecccf602be3dab56affac10933c6beebf6767ee3f0aa5a2ec93f7734a04d11"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.4.6/Saturno-1.4.6-linux-x86_64.tar.gz",
+        "tamano": 26751960,
+        "sha256": "d10500b287874aeb742662900832180b29a4d3399c9bbcf48a09de3f2dfd3a06"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.4.5-windows-x86_64.exe",
+        "archivo": "Saturno-1.4.6-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.4.5/Saturno-1.4.5-windows-x86_64.exe",
-        "tamano": 21425665,
-        "sha256": "0d04edd5d56d59becdb903962f0082f39493faa4fa9eaa72b2bb3a71d81131ae"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.4.6/Saturno-1.4.6-windows-x86_64.exe",
+        "tamano": 21431099,
+        "sha256": "62427a2d459a60ee6ecc1bf593416e1d1832de6b2062a8ba4d5e14fe126d5bc1"
       }
     ]
   },
