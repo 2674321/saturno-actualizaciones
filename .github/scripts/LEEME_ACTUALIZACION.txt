@@ -1,0 +1,49 @@
+SATURNO PC - PAQUETE DE ACTUALIZACION DIRECTA A 1.6.0
+=================================================================
+
+Destinado a equipos Windows x64 con Saturno 1.2.8 o instalaciones anteriores
+que no pueden actualizarse desde el boton del propio sistema.
+
+CONTENIDO
+- Saturno-1.6.0-windows-x86_64.exe: instalador OFICIAL sin datos del cliente.
+- Actualizar_Saturno.cmd: inicio sencillo mediante doble clic.
+- Actualizar_Saturno.ps1: comprueba SHA-256 y ejecuta el instalador.
+- SHA256SUMS.txt: checksum de referencia del instalador.
+
+INSTALAR
+1. Cierre Saturno normalmente. Compruebe que dispone de un respaldo
+   actualizado de su base contable (NO va incluido en este paquete).
+2. Extraiga TODOS los archivos a una carpeta local de Windows.
+3. Ejecute "Actualizar_Saturno.cmd" con doble clic, sin usar
+   "Ejecutar como administrador".
+4. Confirme la actualizacion cuando lo solicite y siga el asistente.
+5. Al finalizar, abra Saturno desde el menu Inicio y revise Sistema > Version.
+
+El instalador oficial reutiliza la identidad (AppId) del producto y el
+directorio de instalacion registrado por Inno Setup. La base habitual,
+la configuracion y los respaldos residen fuera del programa, en:
+%LOCALAPPDATA%\Saturno\
+
+El paquete NO incluye bases, usuarios, parcelas, movimientos, respaldos
+ni exportaciones. La nueva version podria migrar el esquema de una
+base existente al abrirse; por eso se recomienda tener un respaldo
+antes de actualizar. Este asistente no crea ni modifica la base.
+
+SI FALLA
+- No elimine Saturno ni su carpeta de datos.
+- Compruebe que el proceso Saturno.exe no siga abierto.
+- Compruebe el mensaje del asistente y la version con:
+  "%LOCALAPPDATA%\Programs\Saturno\Saturno.exe" --version
+- En instalaciones portables u otra ubicacion, puede que se requiera
+  seleccionar el instalador manualmente. No borre carpetas antiguas
+  mientras no haya comprobado la version nueva.
+- Consulte %LOCALAPPDATA%\Saturno\logs\saturno.log solo en su propio equipo.
+
+VERSION OFICIAL Y VERIFICACION
+Version: 1.6.0
+Instalador: Saturno-1.6.0-windows-x86_64.exe
+Tamaño: 21452444 bytes
+SHA-256: 4eed97056a528a009f68000f64340ef3d6a18e4382b469c9f4c784871308e993
+
+Fuente oficial:
+https://github.com/2674321/saturno-actualizaciones/releases/tag/v1.6.0
