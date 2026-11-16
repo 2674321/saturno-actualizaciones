@@ -1,0 +1,192 @@
+name: Paquete de actualizacion asistida Saturno PC 1.6.0
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/paquete-actualizacion-pc.yml
+
+permissions:
+  contents: write
+
+jobs:
+  validar-salto:
+    name: Windows real 1.2.8 a 1.6.0 (datos ficticios)
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION_ANTERIOR: "1.2.8"
+      VERSION_NUEVA: "1.6.0"
+      REPO_ACTUALIZACIONES: "2674321/saturno-actualizaciones"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Descargar instaladores oficiales y comprobar SHA256
+        shell: pwsh
+        run: |
+          $dest = Join-Path $env:RUNNER_TEMP "instaladores"
+          New-Item -ItemType Directory -Force $dest | Out-Null
+          gh release download v1.2.8 --repo $env:REPO_ACTUALIZACIONES --pattern "Saturno-1.2.8-windows-x86_64.exe" --dir $dest
+          gh release download v1.6.0 --repo $env:REPO_ACTUALIZACIONES --pattern "Saturno-1.6.0-windows-x86_64.exe" --dir $dest
+          $viejo = Join-Path $dest "Saturno-1.2.8-windows-x86_64.exe"
+          $nuevo = Join-Path $dest "Saturno-1.6.0-windows-x86_64.exe"
+          if ((Get-Item $viejo).Length -ne 21119346 -or
+              (Get-FileHash $viejo -Algorithm SHA256).Hash.ToLowerInvariant() -ne "fbab713b671903c3d3f4afad13388563bb8e79685f8bc57ddc8c7e3a62f056c8") {
+            throw "Instalador antiguo no coincide con release oficial"
+          }
+          if ((Get-Item $nuevo).Length -ne 21452444 -or
+              (Get-FileHash $nuevo -Algorithm SHA256).Hash.ToLowerInvariant() -ne "4eed97056a528a009f68000f64340ef3d6a18e4382b469c9f4c784871308e993") {
+            throw "Instalador 1.6.0 no coincide con release oficial"
+          }
+          "INSTALADORES_VERIFICADOS=1" | Out-File -Append $env:GITHUB_ENV
+
+      - name: Instalar Saturno 1.2.8 en Windows
+        shell: pwsh
+        run: |
+          $old = Join-Path $env:RUNNER_TEMP "instaladores\Saturno-1.2.8-windows-x86_64.exe"
+          $p = Start-Process -FilePath $old -ArgumentList @("/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART") -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "Instalacion anterior fallo: $($p.ExitCode)" }
+          $app = Join-Path $env:LOCALAPPDATA "Programs\Saturno\Saturno.exe"
+          if (-not (Test-Path $app)) { throw "No existe Saturno.exe 1.2.8 instalado" }
+          $actual = (& $app --version | Out-String).Trim()
+          if ($actual -notmatch 'Saturno\s+1\.2\.8(?:\s|$)') {
+            throw "Se esperaba 1.2.8, resultado: $actual"
+          }
+          Write-Host "BASE: $actual"
+
+      - name: Crear y registrar datos sinteticos que deben sobrevivir
+        shell: pwsh
+        run: |
+          $app = Join-Path $env:LOCALAPPDATA "Programs\Saturno\Saturno.exe"
+          & $app --verificar-instalacion
+          if ($LASTEXITCODE -ne 0) { throw "La instalacion antigua no pudo preparar una base ficticia" }
+          $datos = Join-Path $env:LOCALAPPDATA "Saturno"
+          $base = Join-Path $datos "saturno.db"
+          if (-not (Test-Path $base)) { throw "No se genero la base de prueba" }
+          $env:SATURNO_QA_BASE = $base
+          @'
+          import os, sqlite3
+          cx = sqlite3.connect(os.environ["SATURNO_QA_BASE"])
+          cx.execute("INSERT INTO padron (parcela, titular, acciones) VALUES (?, ?, ?)",
+                     ("TEST-UPGRADE-001", "TITULAR FICTICIO DE QA", 1.0))
+          cx.commit()
+          assert cx.execute("SELECT COUNT(*) FROM padron WHERE parcela=?", ("TEST-UPGRADE-001",)).fetchone()[0] == 1
+          assert cx.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+          cx.close()
+          '@ | python -
+          if ($LASTEXITCODE -ne 0) { throw "No se pudo preparar la prueba de persistencia" }
+          New-Item -ItemType Directory -Force (Join-Path $datos "respaldos") | Out-Null
+          [IO.File]::WriteAllText((Join-Path $datos "respaldos\prueba-de-conservacion.txt"), "MARCA_FICTICIA_ANTES_DE_ACTUALIZAR", [Text.UTF8Encoding]::new($false))
+          $org = '{"razon_social":"ORGANIZACION DE PRUEBA","rut":"99.999.999-8","domicilio":"CALLE FICTICIA","telefono":"0000"}'
+          [IO.File]::WriteAllText((Join-Path $datos "organizacion.json"), $org, [Text.UTF8Encoding]::new($false))
+          $m = (Get-FileHash (Join-Path $datos "respaldos\prueba-de-conservacion.txt") -Algorithm SHA256).Hash
+          $n = (Get-FileHash (Join-Path $datos "organizacion.json") -Algorithm SHA256).Hash
+          "SHA_MARCA=$m" | Out-File -Append $env:GITHUB_ENV
+          "SHA_ORG=$n" | Out-File -Append $env:GITHUB_ENV
+
+      - name: Probar el asistente real sobre 1.2.8
+        shell: pwsh
+        run: |
+          Copy-Item (Join-Path $env:RUNNER_TEMP "instaladores\Saturno-1.6.0-windows-x86_64.exe") ".github\scripts\Saturno-1.6.0-windows-x86_64.exe"
+          & ".\.github\scripts\Actualizar_Saturno.ps1" -Silencioso
+          if ($LASTEXITCODE -ne 0) { throw "Asistente de actualizacion fallo con $LASTEXITCODE" }
+
+      - name: Confirmar integridad, version y persistencia
+        shell: pwsh
+        run: |
+          $app = Join-Path $env:LOCALAPPDATA "Programs\Saturno\Saturno.exe"
+          $version = (& $app --version | Out-String).Trim()
+          if ($version -notmatch 'Saturno\s+1\.6\.0(?:\s|$)') { throw "Version despues de instalar: $version" }
+          $datos = Join-Path $env:LOCALAPPDATA "Saturno"
+          $base = Join-Path $datos "saturno.db"
+          if ((Get-FileHash (Join-Path $datos "organizacion.json") -Algorithm SHA256).Hash -ne $env:SHA_ORG) {
+            throw "La configuracion ficticia cambio"
+          }
+          if ((Get-FileHash (Join-Path $datos "respaldos\prueba-de-conservacion.txt") -Algorithm SHA256).Hash -ne $env:SHA_MARCA) {
+            throw "El respaldo ficticio cambio"
+          }
+          $env:SATURNO_QA_BASE = $base
+          @'
+          import os, sqlite3
+          cx = sqlite3.connect(os.environ["SATURNO_QA_BASE"])
+          assert cx.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+          assert cx.execute("SELECT COUNT(*) FROM padron WHERE parcela=? AND titular=?",
+                            ("TEST-UPGRADE-001", "TITULAR FICTICIO DE QA")).fetchone()[0] == 1
+          print("PASS: base de prueba integra y parcela sintetica conservada")
+          cx.close()
+          '@ | python -
+          if ($LASTEXITCODE -ne 0) { throw "La base ficticia no sobrevivio al salto de version" }
+          & $app --verificar-instalacion
+          if ($LASTEXITCODE -ne 0) { throw "La version 1.6.0 instalada no supera verificacion inicial" }
+          "PASS: actualizacion real 1.2.8 a 1.6.0; base, respaldo y configuracion sinteticos conservados" | Out-File -FilePath "QA-SALTO-WINDOWS.txt" -Encoding utf8
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-actualizacion-1.2.8-a-1.6.0
+          path: QA-SALTO-WINDOWS.txt
+          if-no-files-found: ignore
+
+  empaquetar:
+    name: Empaquetar instalador verificado sin datos
+    needs: validar-salto
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar instalador publico y validar huella
+        shell: bash
+        run: |
+          mkdir -p pack
+          gh release download v1.6.0 --repo 2674321/saturno-actualizaciones \
+            --pattern "Saturno-1.6.0-windows-x86_64.exe" --dir pack
+          echo "4eed97056a528a009f68000f64340ef3d6a18e4382b469c9f4c784871308e993  pack/Saturno-1.6.0-windows-x86_64.exe" | sha256sum --check
+          test "$(stat -c%s pack/Saturno-1.6.0-windows-x86_64.exe)" -eq 21452444
+          cp .github/scripts/Actualizar_Saturno.cmd pack/
+          cp .github/scripts/Actualizar_Saturno.ps1 pack/
+          cp .github/scripts/LEEME_ACTUALIZACION.txt pack/
+          printf "4eed97056a528a009f68000f64340ef3d6a18e4382b469c9f4c784871308e993  Saturno-1.6.0-windows-x86_64.exe\n" > pack/SHA256SUMS.txt
+
+      - name: Crear ZIP completo y checksum del ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          src = Path("pack")
+          out = Path("Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip")
+          names = ["Actualizar_Saturno.cmd","Actualizar_Saturno.ps1",
+                   "LEEME_ACTUALIZACION.txt","SHA256SUMS.txt",
+                   "Saturno-1.6.0-windows-x86_64.exe"]
+          assert sorted(p.name for p in src.iterdir()) == sorted(names)
+          with zipfile.ZipFile(out, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+              for name in names:
+                  z.write(src / name, arcname=name)
+          with zipfile.ZipFile(out) as z:
+              assert z.testzip() is None
+              assert sorted(z.namelist()) == sorted(names)
+          assert out.stat().st_size > 15_000_000
+          print(f"PAQUETE_VERIFICADO: {out} ({out.stat().st_size} bytes)")
+          PY
+          sha256sum Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip \
+            > Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip.sha256
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: saturno-pack-actualizacion-windows-1.6.0
+          path: |
+            Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip
+            Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip.sha256
+          retention-days: 30
+
+      - name: Publicar pack adicional en el release existente 1.6.0
+        shell: bash
+        run: |
+          gh release upload v1.6.0 \
+            Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip \
+            Saturno-Actualizacion-Asistida-1.2.8-a-1.6.0-Windows.zip.sha256 \
+            --repo 2674321/saturno-actualizaciones --clobber
