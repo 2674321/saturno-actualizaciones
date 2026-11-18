@@ -2,36 +2,36 @@
   "esquema": "saturno-update/1",
   "producto": "Saturno",
   "canal": "stable",
-  "version": "1.6.0",
-  "revision": "63e9aee0dfe18057e42ab542b62c6c8e827074bc",
-  "publicado": "2026-11-14",
-  "notas": "Mejora la búsqueda y orden global de movimientos, evita conciliaciones involuntarias y reúne los formatos de impresión con triplicado claramente identificado.",
+  "version": "1.7.1",
+  "revision": "8e177e84c69e4563c18ebc5e02866dff8397905c",
+  "publicado": "2026-11-17",
+  "notas": "Corrige la precisión del dinero al centavo (vista previa y deuda real), hace seguras las rectificaciones de años anteriores con saldos importados, guarda el desglose antes/después real en la bitácora de clasificaciones, protege la confirmación de revisiones con huella de vigencia y concilia el total de deuda entre Padrón, Inicio, Centro de revisión y PDF.",
   "minimo_actualizador": "1.0.0",
   "artefactos": {
     "linux-x86_64": [
       {
-        "archivo": "Saturno-1.6.0-linux-x86_64.tar.gz",
+        "archivo": "Saturno-1.7.1-linux-x86_64.tar.gz",
         "tipo": "portable-linux",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.6.0/Saturno-1.6.0-linux-x86_64.tar.gz",
-        "tamano": 26778066,
-        "sha256": "4eb12b0caa9225c4adbce5541d1072aa0162966af3ffd2cc77d4ae9d0d78ef07"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.7.1/Saturno-1.7.1-linux-x86_64.tar.gz",
+        "tamano": 42270145,
+        "sha256": "d3e8b91be6971046c42ba4e150af351869d8fc53d3686eca47ac32ab2c55f235"
       }
     ],
     "windows-x86_64": [
       {
-        "archivo": "Saturno-1.6.0-windows-x86_64.exe",
+        "archivo": "Saturno-1.7.1-windows-x86_64.exe",
         "tipo": "instalador-windows",
-        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.6.0/Saturno-1.6.0-windows-x86_64.exe",
-        "tamano": 21452444,
-        "sha256": "4eed97056a528a009f68000f64340ef3d6a18e4382b469c9f4c784871308e993"
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.7.1/Saturno-1.7.1-windows-x86_64.exe",
+        "tamano": 21483915,
+        "sha256": "c9b98b45f3776b6850019c1a75da758b41697b7ff94f514666112117d9596bc9"
+      },
+      {
+        "archivo": "Saturno-1.7.1-windows-x86_64.zip",
+        "tipo": "portable-windows",
+        "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.7.1/Saturno-1.7.1-windows-x86_64.zip",
+        "tamano": 25838582,
+        "sha256": "25395403ec6b04b9064f34b517b6c90afbc9b06b338c2b660db26019f2c10907"
       }
     ]
-  },
-  "reparacion_privada": {
-    "id": "reparacion-padrones-2026-10",
-    "archivo": "reparacion-padrones-2026-10.saturno.enc",
-    "url": "https://github.com/2674321/saturno-actualizaciones/releases/download/v1.2.8/reparacion-padrones-2026-10.saturno.enc",
-    "tamano": 923392,
-    "sha256": "67fbf877b98a97d1c7be472fd0cb51bcec16f49e47868378f5dbd4b1a173c6ba"
   }
 }
